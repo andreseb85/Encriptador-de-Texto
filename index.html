@@ -1,51 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Encriptador de Texto</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header>
-    <img src="./Imagenes/Logo.png" alt="logo" id="logo">
-  </header>
-    <section class="form-box">
-      <form action="">
-        <div class="label-info">
-          <img src="./Imagenes/Group.svg" alt="importante" id="imgInfo">  
-          <label class="info" for="input-texto">Solo letras minúsculas, sin acentos</label>
-        </div>
-        <input class="text-input" type="text" name="input-texto" id="input-texto" placeholder="Ingrese el texto aquí">
-        <div id="botones">
-          <input class="btn" type="button" value="Encriptar" id="btn-encriptar">
-          <input class="btn2" type="button" value="Desencriptar" id="btn-desencriptar">
-        </div>
-      </form>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img src="./Imagenes/Logo.png" alt="logo" id="logo" />
+    </header>
+    <section class="content">
+      <section class="form-box">
+        <form action="">
+          <textarea
+            class="text-input"
+            type="text"
+            name="input-texto"
+            id="input-texto"
+            placeholder="Ingrese el texto aquí"
+          ></textarea>
+
+          <div class="label-info">
+            <img src="./Imagenes/Group.svg" alt="importante" id="imgInfo" />
+            <label class="info" for="input-texto"
+              >Solo letras minúsculas, sin acentos</label
+            >
+          </div>
+
+          <div id="botones">
+            <input
+              class="btn"
+              type="button"
+              value="Encriptar"
+              id="btn-encriptar"
+            />
+            <input
+              class="btn2"
+              type="button"
+              value="Desencriptar"
+              id="btn-desencriptar"
+            />
+          </div>
+        </form>
+        <section class="msg-box" id="cajaRespuesta">
+          <h2 id=""></h2>
+
+          <div id="divImagen">
+            <picture>
+              <source
+                srcset="./Imagenes/Muñeco.png"
+                media="screen and (max-width : 400px)"
+              />
+              <img src="./Imagenes/Muñeco.png" id="imagen" class="img" />
+            </picture>
+            <p class="texto1"><strong>Ningún mensaje fue encontrado</strong></p>
+            <p class="texto2">
+              Ingrese el texto que deseas encriptar o desencriptar
+            </p>
+          </div>
+          <div id="botonCopiar">
+            <textarea class="text-input-salida" type="text" id="msg" ></textarea>
+            <input class="btn3" type="button" value="Copiar" id="btn-copy" />
+          </div>
+        </section>
+      </section>
     </section>
-    <section class="msg-box" id="cajaRespuesta">
-      <h2 id=""></h2>
-          
-      <div id="divImagen">
-        <picture>
-          <source srcset="./Imagenes/Muñeco.png" media="screen and (max-width : 400px)">
-          <img src="./Imagenes/Muñeco.png" id="imagen" class="img">
-        </picture>
-        <p class="texto1"><strong>Ningún mensaje fue encontrado</strong></p>
-        <p class="texto2">Ingrese el texto que deseas encriptar o desencriptar</p>
-      </div>
-      <div id="botonCopiar">
-        <input class="text-input-salida" type="text" id="msg">
-        <input class="btn3" type="button" value="Copiar" id="btn-copy">
-      </div>  
-    </section>
-  <footer>
-    <p>by Andrés Emilio Benito H.</p> 
-  </footer>
-  <script src="./script.js"></script>
-</body>
+
+    <footer>
+      <p>by Andrés Emilio Benito H.</p>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
 </html>
