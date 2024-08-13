@@ -15,6 +15,7 @@ function resultado(){
 
 function quitarImagen() {
     document.getElementById("divImagen").style.display = "none";
+    document.getElementById("botonCopiar").style.display = "flex";
 
   }
 

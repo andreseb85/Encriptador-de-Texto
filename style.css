@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
@@ -8,19 +8,14 @@
 body {
   background: #e5e5e5;
 }
-
-#logo {
+header {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 40px;
-
-  position: absolute;
-  width: 120px;
-  height: 48px;
-  left: 40px;
-  top: 40px;
+  justify-content: flex-start;
+  padding: 20px;
+}
+#logo {
+  display: block;
+  margin: 0px;
 }
 
 .text-input {
@@ -51,24 +46,18 @@ body {
 
 .imgInfo {
   position: absolute;
-
   left: 120px;
   right: 0%;
   top: 0%;
   bottom: 0%;
-
   background: #495057;
 }
 
 .label-info {
   display: flex;
-
   flex-direction: row;
-
   align-items: center;
-
   padding: 0px;
-
   gap: 8px;
 }
 
@@ -76,7 +65,7 @@ body {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 14px;
   color: red;
   opacity: 0.8;
 }
@@ -85,13 +74,15 @@ form {
   width: 68%;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 15px;
   align-items: center;
 }
 
 section.form-box {
   display: flex;
   gap: 2%;
+  max-width: 800px;
+  width: 100%;
 }
 section.content {
   width: 100%;
@@ -121,7 +112,7 @@ div#divImagen picture source {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 24px;
+  padding: 12px;
   line-height: 1;
   height: auto;
   background: #0a3871;
@@ -133,15 +124,12 @@ div#divImagen picture source {
 .btn {
   width: 280px;
   height: 19px;
-
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-
   color: #ffffff;
-
   flex: none;
   order: 0;
   flex-grow: 1;
@@ -156,7 +144,7 @@ div#divImagen picture source {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 24px;
+  padding: 12px;
   line-height: 1;
   height: auto;
   border-radius: 24px;
@@ -173,9 +161,7 @@ div#divImagen picture source {
   font-size: 16px;
   line-height: 19px;
   text-align: center;
-
   color: #0a3871;
-
   flex: none;
   order: 0;
   flex-grow: 1;
@@ -226,12 +212,13 @@ div#divImagen picture source {
   width: 100%;
   font-family: "Inter";
   font-style: normal;
-  font-size: 16px;
   font-weight: 400;
   font-size: 20px;
   border: 0;
   outline: none;
   color: #495057;
+  height: 100%;
+  resize: none;
 }
 
 #btn-copy {
@@ -239,10 +226,10 @@ div#divImagen picture source {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  padding: 24px;
+  padding: 12px;
   gap: 8px;
   width: 100%;
-  height: 67px;
+  height: auto;
   cursor: pointer;
   border: 1px solid #0a3871;
   border-radius: 24px;
@@ -251,16 +238,13 @@ div#divImagen picture source {
 .btn3 {
   width: 288px;
   height: 19px;
-
   font-family: "Inter";
   font-style: normal;
   font-size: 16px;
   font-weight: 400;
   line-height: 19px;
-
   text-align: center;
   color: #0a3871;
-
   flex: none;
   order: 0;
   flex-grow: 1;
@@ -274,6 +258,13 @@ footer {
   bottom: 0;
   text-align: center;
 }
+div#botonCopiar {
+  padding: 20px;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
 /*Phone Cell*/
 
 @media screen and (max-width: 400px) {
@@ -284,9 +275,34 @@ footer {
 
   form {
     width: 100%;
+    gap: 10px;
   }
 
   section#cajaRespuesta {
     width: 100%;
+  }
+  header {
+    padding: 20px 0px;
+  }
+  .info {
+    font-size: 14px;
+  }
+  #botones {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  #btn-encriptar,
+  #btn-desencriptar,
+  #btn-copy {
+    padding: 12px;
+    width: 100%;
+  }
+  section.content {
+    justify-content: flex-start;
+  }
+  #msg {
+    max-height: 400px;
+    height: 300px;
   }
 }
