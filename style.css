@@ -7,6 +7,7 @@
 }
 body {
   background: #e5e5e5;
+  --var-color:#0a3871;
 }
 header {
   display: flex;
@@ -25,7 +26,7 @@ header {
   font-weight: 400;
   font-size: 20px;
   line-height: 1.2;
-  color: #0a3871;
+  color: var(--var-color);
   background: white;
   border: 0;
   outline: none;
@@ -86,7 +87,7 @@ section.form-box {
 }
 section.content {
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 120px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -115,7 +116,7 @@ div#divImagen picture source {
   padding: 12px;
   line-height: 1;
   height: auto;
-  background: #0a3871;
+  background: var(--var-color);
   border-radius: 24px;
   cursor: pointer;
   flex: auto;
@@ -139,7 +140,7 @@ div#divImagen picture source {
   gap: 8px;
   width: 50%;
   background: #d8dfe8;
-  border: 1px solid #0a3871;
+  border: 1px solid var(--var-color);
   order: 1;
   display: flex;
   flex-direction: row;
@@ -161,7 +162,7 @@ div#divImagen picture source {
   font-size: 16px;
   line-height: 19px;
   text-align: center;
-  color: #0a3871;
+  color: var(--var-color);
   flex: none;
   order: 0;
   flex-grow: 1;
@@ -231,7 +232,7 @@ div#divImagen picture source {
   width: 100%;
   height: auto;
   cursor: pointer;
-  border: 1px solid #0a3871;
+  border: 1px solid var(--var-color);
   border-radius: 24px;
 }
 
@@ -244,7 +245,7 @@ div#divImagen picture source {
   font-weight: 400;
   line-height: 19px;
   text-align: center;
-  color: #0a3871;
+  color: var(--var-color);
   flex: none;
   order: 0;
   flex-grow: 1;
