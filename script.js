@@ -8,19 +8,12 @@ function resultado(){
         document.getElementById("botonCopiar").style.display = "block";
         document.getElementById("divImagen").style.display = "none";
     }
-
-
-
 }
 
 function quitarImagen() {
     document.getElementById("divImagen").style.display = "none";
     document.getElementById("botonCopiar").style.display = "flex";
-
-  }
-
-
-
+ }
 function encriptar (){
     const caracteres = /[A-Z0-9~!@#$%&*()_+|{}[\]\\\/?><^:"`;.,áéíóúàèìòù']/g;
     var texto = document.querySelector("#input-texto").value;
@@ -40,13 +33,11 @@ function encriptar (){
         document.getElementById("msg").style.visibility = "visible";
         document.getElementById("btn-copy").style.visibility = "visible";
         
-        quitarImagen();
-        
-      
+        quitarImagen(); 
     }
     }
 
-
+    
 var boton1 = document.querySelector("#btn-encriptar"); boton1.onclick = encriptar;
 
 function desencriptar (){
